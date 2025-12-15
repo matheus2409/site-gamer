@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Valorant</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="valorant">
+
+<header>
+  <h1>Valorant</h1>
+</header>
+
+<section class="hero">
+  <h2>FPS Tático 5x5</h2>
+  <p>Precisão, estratégia e trabalho em equipe</p>
+</section>
+
+<a href="../index.html">⬅ Voltar</a>
+
+<button id="soundToggle">🔊</button>
+
+<audio id="bgSound" loop>
+  <source src="../sounds/valorant.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const audio = document.getElementById("bgSound");
+const toggle = document.getElementById("soundToggle");
+let playing = false;
+
+window.addEventListener("click", () => {
+  if (!playing) {
+    audio.volume = 0.3;
+    audio.play();
+    playing = true;
+  }
+}, { once: true });
+
+toggle.onclick = () => {
+  if (audio.paused) {
+    audio.play();
+    toggle.textContent = "🔊";
+  } else {
+    audio.pause();
+    toggle.textContent = "🔇";
+  }
+};
+</script>
+
+</body>
+</html>

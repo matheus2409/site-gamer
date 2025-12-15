@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameZone</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<div id="loader">LOADING GAMEZONE...</div>
+
+<canvas id="particles"></canvas>
+
+<div class="hud">
+    <span>HP ██████████</span>
+    <span>FPS 144</span>
+</div>
+
+<header>
+    <h1 class="glitch" data-text="GameZone">GameZone</h1>
+    <button id="toggleTheme">🌗</button>
+</header>
+
+<section class="hero">
+    <h2>Escolha seu jogo</h2>
+    <p>Cada jogo é uma experiência</p>
+</section>
+
+<section class="games">
+<div class="cards">
+
+<div class="card valorant reveal" data-theme="valorant">
+<h3>Valorant</h3>
+<p>FPS tático competitivo</p>
+<a href="jogos/valorant.html">Entrar</a>
+</div>
+
+<div class="card fortnite reveal" data-theme="fortnite">
+<h3>Fortnite</h3>
+<p>Battle Royale insano</p>
+<a href="jogos/fortnite.html">Entrar</a>
+</div>
+
+<div class="card minecraft reveal" data-theme="minecraft">
+<h3>Minecraft</h3>
+<p>Criação infinita</p>
+<a href="jogos/minecraft.html">Entrar</a>
+</div>
+
+</div>
+</section>
+
+<footer>© 2025 GameZone</footer>
+
+<audio id="gameSound" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
