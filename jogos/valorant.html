@@ -12,7 +12,7 @@
   <h1>Valorant</h1>
 </header>
 
-<section class="hero">
+<section class="hero-game">
   <h2>FPS Tático 5x5</h2>
   <p>Precisão, estratégia e trabalho em equipe</p>
 </section>
@@ -29,17 +29,13 @@
 <script>
 const audio = document.getElementById("bgSound");
 const toggle = document.getElementById("soundToggle");
-// NOVO: Selecionar o slider de volume
 const volumeSlider = document.getElementById("volume");
 let playing = false;
 
-// Configurar o volume inicial do slider para corresponder ao volume de início (0.3)
 volumeSlider.value = 0.3;
-
 
 window.addEventListener("click", () => {
   if (!playing) {
-    // Definimos o volume do áudio para o valor inicial do slider (0.3)
     audio.volume = parseFloat(volumeSlider.value);
     audio.play();
     playing = true;
@@ -56,9 +52,7 @@ toggle.onclick = () => {
   }
 };
 
-// NOVO: Event Listener para o slider
 volumeSlider.oninput = () => {
-    // Quando o utilizador mexe o slider, atualiza o volume do áudio
     audio.volume = parseFloat(volumeSlider.value);
 };
 </script>
