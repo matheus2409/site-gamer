@@ -1,72 +1,167 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-.hero{
-text-align:center;
-padding:80px 20px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
 }
 
-
-.games{
-padding:60px 20px;
+/* Background e cores principais */
+body {
+    --main-color: #00ffcc;
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-
-.cards{
-display:flex;
-gap:30px;
-justify-content:center;
-flex-wrap:wrap;
+body.valorant {
+    --main-color: #ff4655;
 }
 
-
-.card{
-width:260px;
-background:#111;
-padding:25px;
-border-radius:15px;
-border:1px solid var(--main-color);
-text-align:center;
-transition:.4s;
+body.fortnite {
+    --main-color: #9b5cff;
 }
 
-
-.card:hover{
-transform:translateY(-12px) scale(1.05);
-box-shadow:0 0 30px var(--main-color);
+body.minecraft {
+    --main-color: #3bd16f;
 }
 
-
-.card a{
-color:var(--main-color);
-text-decoration:none;
-display:inline-block;
-margin-top:10px;
+/* Partículas */
+#particles {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
 }
 
-
-.card.valorant{--main-color:#ff4655}
-.card.fortnite{--main-color:#9b5cff}
-.card.minecraft{--main-color:#3bd16f}
-
-
-footer{
-text-align:center;
-padding:20px;
-border-top:2px solid var(--main-color);
-font-size:13px;
+/* Header */
+header {
+    text-align: center;
+    padding: 30px;
+    border-bottom: 2px solid var(--main-color);
 }
 
+.glitch {
+    position: relative;
+    color: var(--main-color);
+}
 
-#soundToggle{
-position:fixed;
-bottom:20px;
-right:20px;
-width:50px;
-height:50px;
-border-radius:50%;
-border:none;
-background:var(--main-color);
-color:#000;
-font-size:20px;
-cursor:pointer;
-box-shadow:0 0 15px var(--main-color);
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+}
+
+.glitch::before {
+    color: red;
+    animation: glitch 1s infinite;
+}
+
+.glitch::after {
+    color: blue;
+    animation: glitch 1.3s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(2px, -2px);
+    }
+    60% {
+        transform: translate(-1px, 1px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Seção hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* Cards de jogos */
+.games {
+    padding: 60px 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 260px;
+    background: #111;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid var(--main-color);
+    text-align: center;
+    transition: .4s;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 0 30px var(--main-color);
+}
+
+.card a {
+    color: var(--main-color);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.card.valorant {
+    --main-color: #ff4655;
+}
+
+.card.fortnite {
+    --main-color: #9b5cff;
+}
+
+.card.minecraft {
+    --main-color: #3bd16f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid var(--main-color);
+    font-size: 13px;
+}
+
+/* Botão de som */
+#soundToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: var(--main-color);
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+/* Controle de volume */
+#volume {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 150px;
 }
