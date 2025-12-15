@@ -4,59 +4,101 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GameZone</title>
+
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
+
 <body>
 
+<div id="loader">
+  <span>LOADING GAMEZONE...</span>
+</div>
 
 <canvas id="particles"></canvas>
 
+<div class="hud">
+  <span>HP ██████████</span>
+  <span>FPS 144</span>
+</div>
 
 <header>
-<h1 class="glitch" data-text="GameZone">GameZone</h1>
+  <h1 class="glitch" data-text="GameZone">GameZone</h1>
+
+  <button id="toggleTheme" title="Alternar tema">
+    🌗
+  </button>
 </header>
 
-
 <section class="hero">
-<h2>Escolha seu jogo</h2>
-<p>Experiência gamer imersiva</p>
+  <h2>Escolha seu jogo</h2>
+  <p>Uma experiência gamer imersiva</p>
 </section>
-
 
 <section class="games">
-<div class="cards">
+  <div class="cards">
 
+    <div class="card valorant" data-theme="valorant">
+      <h3>Valorant</h3>
+      <p>FPS tático competitivo</p>
+      <a href="jogos/valorant.html">Entrar</a>
+    </div>
 
-<div class="card valorant" data-theme="valorant">
-<h3>Valorant</h3>
-<p>FPS tático competitivo</p>
-<a href="jogos/valorant.html">Entrar</a>
-</div>
+    <div class="card fortnite" data-theme="fortnite">
+      <h3>Fortnite</h3>
+      <p>Battle Royale insano</p>
+      <a href="jogos/fortnite.html">Entrar</a>
+    </div>
 
+    <div class="card minecraft" data-theme="minecraft">
+      <h3>Minecraft</h3>
+      <p>Criação infinita</p>
+      <a href="jogos/minecraft.html">Entrar</a>
+    </div>
 
-<div class="card fortnite" data-theme="fortnite">
-<h3>Fortnite</h3>
-<p>Battle Royale insano</p>
-<a href="jogos/fortnite.html">Entrar</a>
-</div>
-
-
-<div class="card minecraft" data-theme="minecraft">
-<h3>Minecraft</h3>
-<p>Criação infinita</p>
-<a href="jogos/minecraft.html">Entrar</a>
-</div>
-
-
-</div>
+  </div>
 </section>
 
-
 <footer>
-<p>© 2025 GameZone</p>
+  <p>© 2025 GameZone • Projeto Gamer</p>
 </footer>
 
+<audio id="hoverSound" src="sounds/hover.mp3"></audio>
+<audio id="clickSound" src="sounds/click.mp3"></audio>
 
 <script src="script.js"></script>
+
+<script>
+/* LOADER */
+window.addEventListener("load", () => {
+  document.getElementById("loader").style.display = "none";
+});
+
+/* TEMA CLARO / ESCURO */
+const toggleTheme = document.getElementById("toggleTheme");
+toggleTheme.onclick = () => {
+  document.body.classList.toggle("light");
+};
+
+/* SONS DE INTERFACE */
+const hoverSound = document.getElementById("hoverSound");
+const clickSound = document.getElementById("clickSound");
+
+hoverSound.volume = 0.2;
+clickSound.volume = 0.4;
+
+document.querySelectorAll("a, button, .card").forEach(el => {
+  el.addEventListener("mouseenter", () => {
+    hoverSound.currentTime = 0;
+    hoverSound.play();
+  });
+
+  el.addEventListener("click", () => {
+    clickSound.currentTime = 0;
+    clickSound.play();
+  });
+});
+</script>
+
 </body>
 </html>

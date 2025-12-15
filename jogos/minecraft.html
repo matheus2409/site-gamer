@@ -2,21 +2,65 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Valorant</title>
+    <title>Minecraft</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-<body class="valorant">
+<body class="minecraft">
 
 <header>
-    <h1>Valorant</h1>
+    <h1>Minecraft</h1>
 </header>
 
 <section class="hero">
-    <h2>FPS tático 5x5</h2>
-    <p>Precisão, estratégia e trabalho em equipe.</p>
+    <h2>Criação, Aventura e Sobrevivência</h2>
+    <p>Liberdade para construir o seu próprio mundo de blocos.</p>
 </section>
 
 <a href="../index.html">⬅ Voltar</a>
+
+<button id="soundToggle">🔊</button>
+<input type="range" id="volume" min="0" max="1" step="0.1" value="0.3">
+
+<audio id="bgSound" loop>
+  <source src="../sounds/minecraft.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const audio = document.getElementById("bgSound");
+const toggle = document.getElementById("soundToggle");
+// NOVO: Selecionar o slider de volume
+const volumeSlider = document.getElementById("volume");
+let playing = false;
+
+// Configurar o volume inicial do slider para corresponder ao volume de início (0.3)
+volumeSlider.value = 0.3;
+
+
+window.addEventListener("click", () => {
+  if (!playing) {
+    // Definimos o volume do áudio para o valor inicial do slider (0.3)
+    audio.volume = parseFloat(volumeSlider.value);
+    audio.play();
+    playing = true;
+  }
+}, { once: true });
+
+toggle.onclick = () => {
+  if (audio.paused) {
+    audio.play();
+    toggle.textContent = "🔊";
+  } else {
+    audio.pause();
+    toggle.textContent = "🔇";
+  }
+};
+
+// NOVO: Event Listener para o slider
+volumeSlider.oninput = () => {
+    // Quando o utilizador mexe o slider, atualiza o volume do áudio
+    audio.volume = parseFloat(volumeSlider.value);
+};
+</script>
 
 </body>
 </html>
