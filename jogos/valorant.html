@@ -1,61 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Valorant</title>
-<link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VALORANT | Tiro Tático 5v5 focado em Personagens</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
-
 <body class="valorant">
+    <div class="hud">
+        <div class="hud-tag">ID_SESSION: //VAL_882</div>
+        <div class="hud-tag">STATUS: //READY_TO_DEPLOY</div>
+    </div>
 
-<header>
-  <h1>Valorant</h1>
-</header>
+    <section class="hero-game" style="background-image: url('../images/valorant.png');">
+        <div class="content-box">
+            <h1 class="glitch" data-text="VALORANT" style="font-size: 5rem; margin-bottom: 20px;">VALORANT</h1>
+            <h2>PRECISÃO, ESTRATÉGIA E HABILIDADES ÚNICAS</h2>
+            <p>VALORANT é um jogo de tiro tático 5v5 desenvolvido pela Riot Games. Domine agentes, execute táticas perfeitas e prove sua habilidade em partidas altamente competitivas onde cada disparo conta.</p>
+            
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://playvalorant.com/pt-br/download/" target="_blank" class="btn-download" id="actionBtn">▶️ JOGAR AGORA</a>
+                <a href="#" class="btn-download" style="background: transparent; color: var(--main-color); border: 2px solid var(--main-color);">⬇️ BAIXAR GRATUITAMENTE</a>
+                <a href="#" class="btn-download" style="background: #fff; color: #000;">🧠 CONHECER AGENTES</a>
+            </div>
+        </div>
+    </section>
 
-<section class="hero-game">
-  <h2>FPS Tático 5x5</h2>
-  <p>Precisão, estratégia e trabalho em equipe</p>
-</section>
+    <section class="hero-game" style="min-height: auto; padding: 100px 20px; background: #050505;">
+        <div class="content-box" style="border-top: 2px solid var(--main-color); max-width: 1200px;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 40px;">PROTOCOLO DE COMBATE</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; text-align: left;">
+                
+                <div style="padding: 25px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.4); backdrop-filter: blur(10px);">
+                    <h3 style="color: var(--main-color); margin-bottom: 10px;">🧍 AGENTES ÚNICOS</h3>
+                    <p style="font-size: 1rem; border: none; padding: 0; margin-bottom: 20px;">Cada agente possui habilidades especiais que mudam totalmente o rumo da partida.</p>
+                    <a href="#" class="btn-download" style="padding: 10px 20px; font-size: 0.8rem;">🎭 VER AGENTES</a>
+                </div>
 
-<a href="../index.html" style="color: white; text-decoration: none; margin-left: 20px;">⬅ Voltar</a>
+                <div style="padding: 25px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.4);">
+                    <h3 style="color: var(--main-color); margin-bottom: 10px;">🗺️ MAPAS ESTRATÉGICOS</h3>
+                    <p style="font-size: 1rem; border: none; padding: 0; margin-bottom: 20px;">Mapas projetados para combate tático, com múltiplos pontos de ataque e defesa.</p>
+                    <a href="#" class="btn-download" style="padding: 10px 20px; font-size: 0.8rem;">📍 EXPLORAR MAPAS</a>
+                </div>
 
-<button id="soundToggle">🔊</button>
-<input type="range" id="volume" min="0" max="1" step="0.1" value="0.3">
+                <div style="padding: 25px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.4);">
+                    <h3 style="color: var(--main-color); margin-bottom: 10px;">💥 HABILIDADES ESPECIAIS</h3>
+                    <p style="font-size: 1rem; border: none; padding: 0; margin-bottom: 20px;">Use smokes, flashes, paredes e ultimates para dominar o campo de batalha.</p>
+                    <a href="#" class="btn-download" style="padding: 10px 20px; font-size: 0.8rem;">✨ VER HABILIDADES</a>
+                </div>
 
-<audio id="bgSound" loop>
-  <source src="../sounds/valorant/ambient.mp3" type="audio/mpeg">
-</audio>
+                <div style="padding: 25px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.4);">
+                    <h3 style="color: var(--main-color); margin-bottom: 10px;">🏆 MODO COMPETITIVO</h3>
+                    <p style="font-size: 1rem; border: none; padding: 0; margin-bottom: 20px;">Suba de rank, enfrente os melhores jogadores e prove seu nível no Ranked.</p>
+                    <a href="#" class="btn-download" style="padding: 10px 20px; font-size: 0.8rem;">📈 JOGAR RANKED</a>
+                </div>
 
-<script>
-const audio = document.getElementById("bgSound");
-const toggle = document.getElementById("soundToggle");
-const volumeSlider = document.getElementById("volume");
-let playing = false;
+                <div style="padding: 25px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.4);">
+                    <h3 style="color: var(--main-color); margin-bottom: 10px;">👥 TRABALHO EM EQUIPE</h3>
+                    <p style="font-size: 1rem; border: none; padding: 0; margin-bottom: 20px;">Coordenação e estratégia são mais importantes que reflexos rápidos.</p>
+                    <a href="#" class="btn-download" style="padding: 10px 20px; font-size: 0.8rem;">🤝 JOGAR EM GRUPO</a>
+                </div>
 
-volumeSlider.value = 0.3;
+                <div style="padding: 25px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.4);">
+                    <h3 style="color: var(--main-color); margin-bottom: 10px;">🖥️ EXCLUSIVO PARA PC</h3>
+                    <p style="font-size: 1rem; border: none; padding: 0; margin-bottom: 20px;">Otimizado para teclado e mouse, garantindo máxima precisão tática.</p>
+                    <a href="#" class="btn-download" style="padding: 10px 20px; font-size: 0.8rem;">💻 REQUISITOS</a>
+                </div>
 
-window.addEventListener("click", () => {
-  if (!playing) {
-    audio.volume = parseFloat(volumeSlider.value);
-    audio.play();
-    playing = true;
-  }
-}, { once: true });
+            </div>
+        </div>
+    </section>
 
-toggle.onclick = () => {
-  if (audio.paused) {
-    audio.play();
-    toggle.textContent = "🔊";
-  } else {
-    audio.pause();
-    toggle.textContent = "🔇";
-  }
-};
+    <section class="hero-game" style="min-height: auto; padding: 80px 20px; background: linear-gradient(to bottom, #050505, #0a0a0a);">
+        <div class="content-box" style="border-top: 4px solid #fff;">
+            <h2 style="font-size: 2.5rem; color: #fff;">⚔️ TIRO TÁTICO 5V5</h2>
+            <p style="border: none; padding: 0; margin-bottom: 30px;">Trabalho em equipe, comunicação e mira precisa são essenciais para vencer.</p>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <div style="padding: 20px; background: rgba(255,255,255,0.05); border: 1px solid var(--main-color);">
+                    <h3 style="color: var(--main-color);">🔄 ATUALIZAÇÕES CONSTANTES</h3>
+                    <p style="font-size: 0.9rem; border: none; padding: 10px 0;">Novos agentes, mapas e temporadas frequentes.</p>
+                    <a href="#" style="color: #fff; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">🆕 Ver Novidades</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-volumeSlider.oninput = () => {
-    audio.volume = parseFloat(volumeSlider.value);
-};
-</script>
+    <section class="hero-game" style="min-height: 40vh; background: var(--main-color);">
+        <div class="content-box" style="background: #000; border: none;">
+            <h2 style="color: var(--main-color);">🆓 GRATUITO PARA JOGAR</h2>
+            <p style="border-left-color: #fff;">VALORANT é totalmente gratuito. Baixe agora e comece a competir sem custos.</p>
+            <a href="https://playvalorant.com/pt-br/download/" target="_blank" class="btn-download" style="background: #fff; color: #000;">⬇️ DOWNLOAD GRÁTIS</a>
+        </div>
+    </section>
 
+    <footer style="padding: 40px; text-align: center; background: #000; border-top: 1px solid rgba(255,255,255,0.1);">
+        <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">VALORANT © Riot Games. Um jogo de tiro tático competitivo 5v5 focado em estratégia, habilidade e trabalho em equipe.</p>
+        <a href="../index.html" class="back-link" style="position: static;">← TERMINAL_REBOOT</a>
+    </footer>
+
+    <button id="soundToggle" style="position: fixed; bottom: 40px; right: 40px; width: 60px; height: 60px; border-radius: 50%; background: var(--main-color); border: none; cursor: pointer; font-size: 1.5rem; z-index: 1000;">🔊</button>
+    
+    <audio id="bgSound" loop src="../sounds/valorant/ambient.mp3"></audio>
+    <audio id="actionSound" src="../sounds/valorant/spike.mp3"></audio>
+
+    <script>
+        const bg = document.getElementById("bgSound");
+        const action = document.getElementById("actionSound");
+
+        // Feedback sonoro (Spike) para todos os botões de ação
+        document.querySelectorAll('.btn-download').forEach(btn => {
+            btn.onclick = () => { 
+                action.currentTime = 0;
+                action.play(); 
+            };
+        });
+
+        // Iniciar áudio ambiente no primeiro clique
+        window.addEventListener("click", () => { 
+            bg.volume = 0.2; 
+            bg.play(); 
+        }, { once: true });
+
+        // Controle de Mute
+        document.getElementById("soundToggle").onclick = function() {
+            if (bg.paused) {
+                bg.play();
+                this.textContent = "🔊";
+            } else {
+                bg.pause();
+                this.textContent = "🔇";
+            }
+        };
+    </script>
 </body>
 </html>

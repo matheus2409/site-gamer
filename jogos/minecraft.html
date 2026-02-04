@@ -2,59 +2,108 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Minecraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minecraft | Explore, Construa e Sobreviva</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body class="minecraft">
+    <div class="hud">
+        <div class="hud-tag">MODE: //SURVIVAL</div>
+        <div class="hud-tag">BIOME: //EXTREME_HILLS</div>
+    </div>
 
-<header>
-    <h1>Minecraft</h1>
-</header>
+    <section class="hero-game" style="background-image: url('../images/minecraft.jpg');">
+        <div class="content-box">
+            <h1 class="glitch" data-text="MINECRAFT" style="font-size: 5rem; margin-bottom: 20px;">MINECRAFT</h1>
+            <h2>SEU MUNDO, SUAS REGRAS</h2>
+            <p>Explore mundos infinitos, construa castelos que tocam as nuvens ou sobreviva a perigos noturnos. Minecraft é a tela em branco definitiva para sua imaginação, onde cada bloco é uma nova possibilidade de aventura.</p>
+            
+            <div class="btns" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://www.minecraft.net/pt-br/download" target="_blank" class="btn-download" id="dl-btn">BAIXAR MINECRAFT</a>
+                <a href="#" class="btn-download" style="background: transparent; color: var(--main-color); border: 2px solid var(--main-color);">CRIAR MEU MUNDO</a>
+            </div>
+        </div>
+    </section>
 
-<section class="hero-game">
-    <h2>Criação, Aventura e Sobrevivência</h2>
-    <p>Liberdade para construir o seu próprio mundo de blocos.</p>
-</section>
+    <section class="hero-game" style="min-height: auto; padding: 100px 20px; background: #050505;">
+        <div class="content-box" style="border-top: 2px solid var(--main-color);">
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">O QUE É MINECRAFT?</h2>
+            <p style="border: none; padding: 0; margin-bottom: 40px; text-align: center;">Um jogo de mundo aberto onde criatividade, sobrevivência e aventura se encontram.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; text-align: left;">
+                <div style="padding: 20px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.3);">
+                    <h3 style="color: var(--main-color); margin-bottom: 10px;">🌍 Mundo Aberto</h3>
+                    <p style="font-size: 1rem; border: none; padding: 0;">Universo quase infinito gerado automaticamente, repleto de biomas e segredos.</p>
+                </div>
+                <div style="padding: 20px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.3);">
+                    <h3 style="color: var(--main-color); margin-bottom: 10px;">🏗️ Construção Livre</h3>
+                    <p style="font-size: 1rem; border: none; padding: 0;">Construa desde casas simples até cidades gigantes usando blocos.</p>
+                </div>
+                <div style="padding: 20px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.3);">
+                    <h3 style="color: var(--main-color); margin-bottom: 10px;">⚔️ Sobrevivência</h3>
+                    <p style="font-size: 1rem; border: none; padding: 0;">Enfrente monstros, colete recursos e sobreviva noite após noite.</p>
+                </div>
+                <div style="padding: 20px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.3);">
+                    <h3 style="color: var(--main-color); margin-bottom: 10px;">🧑‍🤝‍🧑 Multiplayer</h3>
+                    <p style="font-size: 1rem; border: none; padding: 0;">Jogue com amigos em servidores e participe de minigames globais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<a href="../index.html" style="color: white; text-decoration: none; margin-left: 20px;">⬅ Voltar</a>
+    <section class="hero-game" style="min-height: auto; padding: 80px 20px; background: linear-gradient(to bottom, #050505, #0a0a0a);">
+        <div class="content-box" style="border-top: 4px solid #fff;">
+            <h2 style="font-size: 2.5rem; color: #fff; text-shadow: none;">MODOS DE JOGO</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px;">
+                <div style="padding: 15px; background: rgba(255,255,255,0.05);"><h3>🪓 Sobrevivência</h3></div>
+                <div style="padding: 15px; background: rgba(255,255,255,0.05);"><h3>🧠 Criativo</h3></div>
+                <div style="padding: 15px; background: rgba(255,255,255,0.05);"><h3>🗺️ Aventura</h3></div>
+                <div style="padding: 15px; background: rgba(255,255,255,0.05);"><h3>⚙️ Hardcore</h3></div>
+            </div>
+        </div>
+    </section>
 
-<button id="soundToggle">🔊</button>
-<input type="range" id="volume" min="0" max="1" step="0.1" value="0.3">
+    <section class="hero-game" style="min-height: 40vh; background: var(--main-color);">
+        <div class="content-box" style="background: #000; border: none;">
+            <h2 style="color: var(--main-color);">PRONTO PARA A JORNADA?</h2>
+            <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
+                <a href="#" class="btn-download" style="background: var(--main-color); color: #000;">ENTRAR NO SERVIDOR</a>
+                <a href="#" class="btn-download" style="background: #fff; color: #000;">JOGAR COM AMIGOS</a>
+            </div>
+        </div>
+    </section>
 
-<audio id="bgSound" loop>
-  <source src="../sounds/minecraft/ambient.mp3" type="audio/mpeg">
-</audio>
+    <a href="../index.html" class="back-link">← DISCONNECT_SERVER</a>
 
-<script>
-const audio = document.getElementById("bgSound");
-const toggle = document.getElementById("soundToggle");
-const volumeSlider = document.getElementById("volume");
-let playing = false;
+    <button id="soundToggle" style="position: fixed; bottom: 40px; right: 40px; width: 60px; height: 60px; border-radius: 50%; background: var(--main-color); border: none; cursor: pointer; font-size: 1.5rem;">🔊</button>
+    
+    <audio id="bgSound" loop src="../sounds/minecraft/ambient.mp3"></audio>
+    <audio id="clickSound" src="../sounds/minecraft/click.mp3"></audio>
 
-volumeSlider.value = 0.3;
+    <script>
+        const bg = document.getElementById("bgSound");
+        const click = document.getElementById("clickSound");
+        const dlBtn = document.getElementById("dl-btn");
 
-window.addEventListener("click", () => {
-  if (!playing) {
-    audio.volume = parseFloat(volumeSlider.value);
-    audio.play();
-    playing = true;
-  }
-}, { once: true });
+        // Som ao clicar em qualquer botão de download/ação
+        document.querySelectorAll('.btn-download').forEach(btn => {
+            btn.onclick = () => { click.play(); };
+        });
 
-toggle.onclick = () => {
-  if (audio.paused) {
-    audio.play();
-    toggle.textContent = "🔊";
-  } else {
-    audio.pause();
-    toggle.textContent = "🔇";
-  }
-};
+        window.addEventListener("click", () => { 
+            bg.volume = 0.3; 
+            bg.play(); 
+        }, { once: true });
 
-volumeSlider.oninput = () => {
-    audio.volume = parseFloat(volumeSlider.value);
-};
-</script>
-
+        document.getElementById("soundToggle").onclick = () => {
+            if (bg.paused) {
+                bg.play();
+                document.getElementById("soundToggle").textContent = "🔊";
+            } else {
+                bg.pause();
+                document.getElementById("soundToggle").textContent = "🔇";
+            }
+        };
+    </script>
 </body>
 </html>
